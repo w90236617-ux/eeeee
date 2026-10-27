@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdul Wahab | Web Developer</title>
+  <meta name="description" content="Abdul Wahab is a web developer from Hyderabad, Pakistan, building responsive web applications with HTML, CSS, JavaScript and Firebase while learning React and progressing toward full-stack MERN development.">
+  <meta name="keywords" content="Abdul Wahab, web developer, Hyderabad, Pakistan, HTML, CSS, JavaScript, Bootstrap, Firebase, React, MERN stack, internship, portfolio">
+  <meta name="author" content="Abdul Wahab">
+  <meta name="theme-color" content="#0b0f17">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdul Wahab | Web Developer">
+  <meta property="og:description" content="Web developer from Hyderabad, Pakistan building responsive web applications with HTML, CSS, JavaScript and Firebase. Learning React on the way to MERN stack development.">
+  <meta property="og:url" content="https://wahab-portfolio26.netlify.app/">
+  <meta property="og:image" content="https://wahab-portfolio26.netlify.app/assets/profile/profile.png">
+  <meta property="og:image:alt" content="Portrait of Abdul Wahab">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Abdul Wahab | Web Developer">
+  <meta name="twitter:description" content="Web developer from Hyderabad, Pakistan. HTML, CSS, JavaScript, Firebase. Learning React.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f1626'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%237fa8de'%3EAW%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts (display=swap so text is never invisible; system fonts are the fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sora:wght@600;700;800&display=swap">
+
+  <!-- Set theme + loader state before first paint to avoid a flash -->
+  <script>
+    (function () {
+      var r = document.documentElement;
+      r.classList.add('js');
+      try {
+        var t = localStorage.getItem('aw-theme');
+        if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+      } catch (e) {}
+      var seen = false;
+      try { seen = sessionStorage.getItem('aw-loaded') === '1'; } catch (e) {}
+      r.classList.add(seen ? 'skip-loader' : 'is-loading');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdul Wahab",
+    "jobTitle": "Web Developer",
+    "email": "mailto:w90236617@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressCountry": "PK" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+      <symbol id="i-react" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.8" fill="currentColor"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Loading screen (shown once per browser session; also auto-hides via CSS as a safety net) -->
+  <div id="loader" class="loader" role="status" aria-live="polite">
+    <div class="loader-inner">
+      <p class="loader-code" aria-hidden="true"><span>&lt;</span>AW<span>/&gt;</span></p>
+      <p class="loader-name">Abdul Wahab</p>
+      <p class="loader-role">Web Developer</p>
+      <div class="loader-bar" aria-hidden="true"><span></span></div>
+      <span class="sr-only">Loading portfolio</span>
+    </div>
+  </div>
+
+  <!-- Ambient background -->
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-floaters" aria-hidden="true">
+    <span class="floater" style="--x:6%;--y:14%;--dur:28s;--delay:-6s;--blur:1.5px;--size:2.2rem">&lt;/&gt;</span>
+    <span class="floater" style="--x:86%;--y:10%;--dur:34s;--delay:-12s;--blur:0px;--size:1.5rem">HTML</span>
+    <span class="floater" style="--x:72%;--y:38%;--dur:30s;--delay:-3s;--blur:2.5px;--size:2.6rem">CSS</span>
+    <span class="floater" style="--x:12%;--y:44%;--dur:36s;--delay:-18s;--blur:0.5px;--size:1.6rem">JS</span>
+    <span class="floater floater-icon" style="--x:90%;--y:62%;--dur:32s;--delay:-9s;--blur:1px;--size:3rem"><svg viewBox="0 0 24 24" class="icon"><use href="#i-react"/></svg></span>
+    <span class="floater" style="--x:30%;--y:72%;--dur:38s;--delay:-21s;--blur:2px;--size:2.4rem">{ }</span>
+    <span class="floater" style="--x:58%;--y:86%;--dur:29s;--delay:-14s;--blur:0px;--size:1.4rem">&lt; &gt;</span>
+    <span class="floater floater-icon" style="--x:4%;--y:80%;--dur:35s;--delay:-5s;--blur:2.5px;--size:2.4rem"><svg viewBox="0 0 24 24" class="icon"><use href="#i-react"/></svg></span>
+    <span class="floater" style="--x:48%;--y:8%;--dur:31s;--delay:-16s;--blur:1px;--size:1.3rem">JS</span>
+    <span class="floater floater-dot" style="--x:22%;--y:24%;--dur:22s;--delay:-2s;--size:.7rem"></span>
+    <span class="floater floater-dot" style="--x:64%;--y:20%;--dur:26s;--delay:-8s;--size:.5rem"></span>
+    <span class="floater floater-dot" style="--x:80%;--y:80%;--dur:24s;--delay:-11s;--size:.6rem"></span>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Abdul Wahab, go to top">
+        <span class="brand-mark" aria-hidden="true">AW</span>
+        <span class="brand-name">Abdul Wahab</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="#home" data-nav="home">Home</a></li>
+        <li><a class="nav-link" href="#about" data-nav="about">About</a></li>
+        <li><a class="nav-link" href="#skills" data-nav="skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects" data-nav="projects">Projects</a></li>
+        <li><a class="nav-link" href="#certificate" data-nav="certificate">Certificate</a></li>
+        <li><a class="nav-link" href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-pressed="true" aria-label="Dark mode" title="Toggle dark / light mode">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home" data-nav="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill hero-anim" style="--i:0"><span class="pulse" aria-hidden="true"></span>Open to internship opportunities</p>
+          <h1 id="hero-title" class="hero-anim" style="--i:1"><span class="sr-only">Abdul Wahab, </span><span class="grad-text">Abdul Wahab</span></h1>
+          <p class="hero-role hero-anim" style="--i:2"><span class="mono">&gt;</span> Web Developer</p>
+          <p class="hero-intro hero-anim" style="--i:3">
+            I'm Abdul Wahab, a Web Developer and aspiring Full Stack Developer from Hyderabad, Pakistan. I started my web development journey in 2025 and have built practical projects with HTML, CSS, JavaScript, Bootstrap and ES6. I'm currently learning React.js, with Node.js, Next.js and MongoDB next on my path to becoming a MERN Stack Developer by mid-2027. I'm looking for a web development internship where I can apply my skills on real-world projects and keep growing as a developer.
+          </p>
+          <div class="btn-row hero-anim" style="--i:4">
+            <a class="btn btn-primary" href="#projects">View Projects <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="assets/cv/wahab-CV.pdf" download="wahab-CV.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV</a>
+            <a class="btn btn-ghost" href="assets/cv/wahab-CV.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg> View CV<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-anim" style="--i:2">
+          <div class="avatar-stage">
+            <span class="avatar-glow" aria-hidden="true"></span>
+            <span class="avatar-orbit" aria-hidden="true"></span>
+            <div class="avatar-tilt" data-tilt data-tilt-max="9">
+              <div class="avatar-float">
+                <div class="avatar">
+                  <picture>
+                    <source srcset="assets/profile/profile.webp" type="image/webp">
+                    <img src="assets/profile/profile.png" width="800" height="800" alt="Portrait of Abdul Wahab, wearing glasses and a dark shirt against a light blue background" fetchpriority="high" decoding="async">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <span class="chip-float chip-1" aria-hidden="true">HTML5</span>
+            <span class="chip-float chip-2" aria-hidden="true">CSS3</span>
+            <span class="chip-float chip-3" aria-hidden="true">JS</span>
+            <span class="chip-float chip-4" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#i-react"/></svg>React</span>
+            <span class="chip-float chip-5" aria-hidden="true">node.js</span>
+            <span class="chip-float chip-6" aria-hidden="true">next.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about" data-nav="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Who I am</p>
+          <h2 id="about-title">About Me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a web developer based in Hyderabad, Pakistan. I started learning web development in 2025 and have since built a range of responsive projects with HTML, CSS, JavaScript, Bootstrap and ES6, including applications that use Firebase for authentication and data storage.</p>
+            <p>I'm currently studying Intermediate and learning React.js. Next on my roadmap are Node.js, Next.js and MongoDB, with the goal of becoming a MERN Stack Developer. I expect to complete my full stack development journey by mid-2027.</p>
+            <p>I don't have professional work experience yet, which is exactly why I'm looking for a web development internship: a place to contribute to real projects, learn from experienced developers and keep growing.</p>
+          </div>
+
+          <aside class="card glass about-facts reveal" aria-label="Quick facts">
+            <dl>
+              <div><dt>Name</dt><dd>Abdul Wahab</dd></div>
+              <div><dt>Role</dt><dd>Web Developer</dd></div>
+              <div><dt>Location</dt><dd>Hyderabad, Pakistan</dd></div>
+              <div><dt>Started</dt><dd>Web development in 2025</dd></div>
+              <div><dt>Education</dt><dd>Currently studying Intermediate</dd></div>
+              <div><dt>Learning now</dt><dd>React.js</dd></div>
+              <div><dt>Planned next</dt><dd>Node.js, Next.js and MongoDB</dd></div>
+              <div><dt>Goal</dt><dd>MERN Stack Developer</dd></div>
+              <div><dt>Target</dt><dd>Full stack development by mid-2027</dd></div>
+              <div><dt>Status</dt><dd>Seeking a web development internship</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills" data-nav="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">What I work with</p>
+          <h2 id="skills-title">Skills</h2>
+          <p class="lead">Skills I have learned and used in my projects are kept separate from the ones I'm still learning or have planned.</p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="card glass skill-card reveal">
+            <h3><span class="status-dot status-learned" aria-hidden="true"></span>Learned &amp; used in projects</h3>
+
+            <p class="skill-group-title">Frontend</p>
+            <ul class="chips" data-stagger>
+              <li><span class="chip chip-learned">HTML5</span></li>
+              <li><span class="chip chip-learned">CSS3</span></li>
+              <li><span class="chip chip-learned">JavaScript</span></li>
+              <li><span class="chip chip-learned">Bootstrap</span></li>
+              <li><span class="chip chip-learned">ES6</span></li>
+            </ul>
+
+            <p class="skill-group-title">Backend / Database</p>
+            <ul class="chips" data-stagger>
+              <li><span class="chip chip-learned">Firebase</span></li>
+              <li><span class="chip chip-learned">Firebase Realtime Database</span></li>
+              <li><span class="chip chip-learned">Firebase Authentication</span></li>
+            </ul>
+          </article>
+
+          <article class="card glass skill-card reveal">
+            <h3><span class="status-dot status-learning" aria-hidden="true"></span>Currently learning &amp; planned</h3>
+
+            <p class="skill-group-title">Learning path</p>
+            <ul class="chips" data-stagger>
+              <li><span class="chip chip-learning">React.js <em>Currently learning</em></span></li>
+              <li><span class="chip chip-planned">Node.js <em>Planned</em></span></li>
+              <li><span class="chip chip-planned">Next.js <em>Planned</em></span></li>
+              <li><span class="chip chip-planned">MongoDB <em>Planned</em></span></li>
+            </ul>
+
+            <div class="future-goal">
+              <p class="skill-group-title">Future goal</p>
+              <p class="future-goal-text">MERN Stack Development</p>
+            </div>
+          </article>
+        </div>
+
+        <ul class="legend reveal" aria-label="Legend">
+          <li><span class="status-dot status-learned" aria-hidden="true"></span>Learned</li>
+          <li><span class="status-dot status-learning" aria-hidden="true"></span>Currently learning</li>
+          <li><span class="status-dot status-planned" aria-hidden="true"></span>Planned</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== LEARNING JOURNEY ===================== -->
+    <section class="section" id="journey" data-nav="skills" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Roadmap</p>
+          <h2 id="journey-title">My Learning Journey</h2>
+          <p class="lead">From my first lines of HTML in 2025 to my long-term goal of becoming a MERN Stack Developer.</p>
+        </header>
+
+        <ol class="journey" data-stagger>
+          <li class="step step-done"><span class="step-dot" aria-hidden="true"></span><span class="step-label">2025</span><span class="step-note">Started</span></li>
+          <li class="step step-done"><span class="step-dot" aria-hidden="true"></span><span class="step-label">HTML/CSS</span><span class="step-note">Learned</span></li>
+          <li class="step step-done"><span class="step-dot" aria-hidden="true"></span><span class="step-label">JavaScript</span><span class="step-note">Learned</span></li>
+          <li class="step step-done"><span class="step-dot" aria-hidden="true"></span><span class="step-label">Bootstrap</span><span class="step-note">Learned</span></li>
+          <li class="step step-done"><span class="step-dot" aria-hidden="true"></span><span class="step-label">ES6</span><span class="step-note">Learned</span></li>
+          <li class="step step-current" aria-current="step"><span class="step-dot" aria-hidden="true"></span><span class="step-label">React</span><span class="step-note">Learning now</span></li>
+          <li class="step step-planned"><span class="step-dot" aria-hidden="true"></span><span class="step-label">Node.js</span><span class="step-note">Planned</span></li>
+          <li class="step step-planned"><span class="step-dot" aria-hidden="true"></span><span class="step-label">Next.js</span><span class="step-note">Planned</span></li>
+          <li class="step step-planned"><span class="step-dot" aria-hidden="true"></span><span class="step-label">MongoDB</span><span class="step-note">Planned</span></li>
+          <li class="step step-goal"><span class="step-dot" aria-hidden="true"></span><span class="step-label">MERN Stack</span><span class="step-note">Goal: mid-2027</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects" data-nav="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">My work</p>
+          <h2 id="projects-title">Projects</h2>
+          <p class="lead">Projects I built while learning. Choose a category to browse.</p>
+        </header>
+
+        <div class="seg reveal" role="tablist" aria-label="Project categories">
+          <button class="seg-btn" role="tab" type="button" id="tab-css" aria-controls="panel-css" aria-selected="true" tabindex="0">HTML + CSS</button>
+          <button class="seg-btn" role="tab" type="button" id="tab-js" aria-controls="panel-js" aria-selected="false" tabindex="-1">HTML + CSS + JavaScript</button>
+        </div>
+
+        <!-- ---------- Category 1: HTML + CSS ---------- -->
+        <div class="panel" role="tabpanel" id="panel-css" aria-labelledby="tab-css" tabindex="0">
+          <h3 class="sr-only">HTML + CSS projects</h3>
+          <ol class="project-grid">
+
+            <!-- 1. Barber Shop -->
+            <li class="project reveal">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/barber-shop.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>barbershop-site3.netlify.app</span></div>
+                    <img src="./assets/project-images/barbershop.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Barber Shop Landing Page</h4>
+                  <p>A modern and responsive barber shop landing page designed with HTML and CSS, featuring a clean layout and mobile-friendly presentation.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li></ul>
+                  <a class="btn btn-card" href="https://barbershop-site3.netlify.app/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Barber Shop Landing Page (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 2. Restaurant -->
+            <li class="project reveal">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/restaurant.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>resturant-site2.netlify.app</span></div>
+                   <img src="./assets/project-images/resturant-site.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Restaurant Landing Page</h4>
+                  <p>A responsive restaurant landing page built with HTML and CSS, featuring a clean visual layout designed to provide an attractive browsing experience across devices.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li></ul>
+                  <a class="btn btn-card" href="https://resturant-site2.netlify.app/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Restaurant Landing Page (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 3. Car Site -->
+            <li class="project reveal">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/car-site.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>car-site3.netlify.app</span></div>
+                   <img src="./assets/project-images/carshop.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Car Landing Page</h4>
+                  <p>A modern car-themed landing page created using HTML and CSS, with a responsive layout designed for a smooth experience across desktop and mobile devices.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li></ul>
+                  <a class="btn btn-card" href="https://car-site3.netlify.app/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Car Landing Page (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 4. Apna School -->
+            <li class="project reveal">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/apna-school.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>apna-school-site.netlify.app</span></div>
+                    <img src="./assets/project-images/Screenshot 2026-07-22 183833.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Apna School Landing Page</h4>
+                  <p>A responsive school landing page built with HTML and CSS, presenting educational content through a clean and mobile-friendly interface.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li></ul>
+                  <a class="btn btn-card" href="https://apna-school-site.netlify.app" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Apna School Landing Page (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 5. Anime Website (must stay last in this category) -->
+            <li class="project reveal">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/anime-website.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>anime-website3.netlify.app</span></div>
+                   <img src="./assets/project-images/animesite.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Anime Website</h4>
+                  <p>A responsive anime-themed website built using HTML and CSS, designed with a visually engaging layout and mobile-friendly interface.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li></ul>
+                  <a class="btn btn-card" href="https://anime-website3.netlify.app/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Anime Website (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ---------- Category 2: HTML + CSS + JavaScript ---------- -->
+        <div class="panel" role="tabpanel" id="panel-js" aria-labelledby="tab-js" tabindex="0" hidden>
+          <h3 class="sr-only">HTML + CSS + JavaScript projects</h3>
+          <ol class="project-grid">
+
+            <!-- 1. LMS Admin Dashboard (must stay first in this category) -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/lms-admin-dashboard.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>w90236617-ux.github.io/admin-dashbaord</span></div>
+                    <img src="./assets/project-images/amindashbaord.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>LMS Portal &mdash; Admin Dashboard</h4>
+                  <p>An administrative dashboard for the LMS platform that allows the administrator to manage users, delete users, add courses, and manage quizzes through Firebase Realtime Database.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>ES6</li><li>Firebase Realtime Database</li></ul>
+                  <a class="btn btn-card" href="https://w90236617-ux.github.io/admin-dashbaord/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of LMS Portal Admin Dashboard (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 2. LMS Student Portal -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/lms-student-portal.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>w90236617-ux.github.io/LMSsite</span></div>
+                     <img src="./assets/project-images/lmsportal.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>LMS Student Portal</h4>
+                  <p>A learning management portal where users can sign up, upload a profile picture, select courses, receive a digital student ID card, download the ID card as a PDF, and take quizzes based on their selected course.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Firebase Authentication</li><li>Firebase Realtime Database</li></ul>
+                  <a class="btn btn-card" href="https://w90236617-ux.github.io/LMSsite/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of LMS Student Portal (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 3. API Integration -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/api-integration.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>w90236617-ux.github.io/api-integration</span></div>
+                     <img src="./assets/project-images/API-integration.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>API Integration &mdash; User Data</h4>
+                  <p>An API integration project that fetches user data from an external API and dynamically displays the retrieved information through a responsive web interface.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>API</li></ul>
+                  <a class="btn btn-card" href="https://w90236617-ux.github.io/api-integration/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of API Integration User Data (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 4. Contact List -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/contact-list.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>w90236617-ux.github.io/conatct-list</span></div>
+                     <img src="./assets/project-images/contact-list.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Contact List &mdash; Firebase Database</h4>
+                  <p>A contact management application that stores user data in Firebase Realtime Database, allowing information to be persistently stored and managed through the web interface.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Firebase Realtime Database</li></ul>
+                  <a class="btn btn-card" href="https://w90236617-ux.github.io/conatct-list/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Contact List Firebase Database (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 5. Static Signup / Login -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/static-login-signup.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>static-signup-page.netlify.app</span></div>
+                    <img src="./assets/project-images/signup-page.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Static Login &amp; Signup Page</h4>
+                  <p>A responsive authentication interface featuring login and signup screens with interactive JavaScript functionality and a clean modern layout.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                  <a class="btn btn-card" href="https://static-signup-page.netlify.app/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Static Login and Signup Page (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 6. Excel Sheet & PDF Download (GitHub repository, so "View Source", not "Live View") -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/excel-pdf-download.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>github.com/w90236617-ux/download-excelSheet-and-PDF</span></div>
+                     <img src="./assets/project-images/filterdata.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>Excel Sheet &amp; PDF Download</h4>
+                  <p>A JavaScript-based utility project that provides functionality for downloading data as an Excel sheet and PDF document.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                  <a class="btn btn-card" href="https://w90236617-ux.github.io/download-excelSheet-and-PDF/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> View Source <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of Excel Sheet and PDF Download on GitHub (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+
+            <!-- 7. IPL Teams (must stay last in this category) -->
+            <li class="project">
+              <article class="card glass project-card" data-tilt>
+                <div class="card-preview" aria-hidden="true">
+                  <!-- To use a real screenshot: replace the .mock block with <img src="assets/project-images/ipl-teams.jpg" alt="" loading="lazy"> -->
+                  <div class="mock">
+                    <div class="mock-bar"><i></i><i></i><i></i><span>w90236617-ux.github.io/objects1</span></div>
+                    <img src="./assets/project-images/iplteam.png" alt="" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4>IPL Teams</h4>
+                  <p>An interactive IPL teams project that presents team information and images dynamically using JavaScript objects and a responsive interface.</p>
+                  <ul class="badges" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                  <a class="btn btn-card" href="https://w90236617-ux.github.io/objects1/" target="_blank" rel="noopener noreferrer">Live View <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr-only"> of IPL Teams (opens in a new tab)</span></a>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATE ===================== -->
+    <section class="section" id="certificate" data-nav="certificate" aria-labelledby="certificate-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Achievement</p>
+          <h2 id="certificate-title">Hackathon Certificate</h2>
+        </header>
+
+        <div class="doc-grid">
+          <a class="doc-preview doc-preview-landscape reveal" href="assets/certificate/HACKATHON-CERT-502944.pdf" target="_blank" rel="noopener noreferrer" data-tilt aria-label="Open the Saylani IT Training Programme certificate (PDF, opens in a new tab)">
+            <img src="assets/certificate/certificate-preview.jpg" width="936" height="662" loading="lazy" decoding="async" alt="Certificate of Participation from Saylani IT Training Programme for Abdul Wahab, for taking part in Coding Night (Hackathon), duration 12 hours">
+          </a>
+
+          <div class="card glass doc-info reveal">
+            <span class="doc-icon" aria-hidden="true"><svg class="icon"><use href="#i-award"/></svg></span>
+            <h3>Certificate of Participation</h3>
+            <dl class="doc-facts">
+              <div><dt>Issued by</dt><dd>Saylani IT Training Programme</dd></div>
+              <div><dt>Event</dt><dd>Coding Night (Hackathon)</dd></div>
+              <div><dt>Duration</dt><dd>12 Hours</dd></div>
+              <div><dt>Certificate No.</dt><dd>SMIT/2026/HACKATHON/502944</dd></div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="assets/certificate/HACKATHON-CERT-502944.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg> View Certificate<span class="sr-only"> (opens in a new tab)</span></a>
+              <a class="btn btn-ghost" href="assets/certificate/HACKATHON-CERT-502944.pdf" download="HACKATHON-CERT-502944.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESUME ===================== -->
+    <section class="section" id="resume" data-nav="certificate" aria-labelledby="resume-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Resume</p>
+          <h2 id="resume-title">My CV</h2>
+        </header>
+
+        <div class="doc-grid doc-grid-reverse">
+          <div class="card glass doc-info reveal">
+            <span class="doc-icon" aria-hidden="true"><svg class="icon"><use href="#i-file"/></svg></span>
+            <h3>Abdul Wahab &mdash; CV</h3>
+            <p class="doc-text">My resume in PDF format. You can open it in a new tab or download a copy.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="assets/cv/wahab-CV.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg> View CV<span class="sr-only"> (opens in a new tab)</span></a>
+              <a class="btn btn-ghost" href="assets/cv/wahab-CV.pdf" download="wahab-CV.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV</a>
+            </div>
+          </div>
+
+          <a class="doc-preview doc-preview-portrait reveal" href="assets/cv/wahab-CV.pdf" target="_blank" rel="noopener noreferrer" data-tilt aria-label="Open Abdul Wahab's CV (PDF, opens in a new tab)">
+            <img src="./assets/cv/CV-photo.jpg" width="900" height="1351" loading="lazy" decoding="async" alt="Preview of Abdul Wahab's CV, showing his summary, selected projects, technical skills and education">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERNSHIP / CAREER ===================== -->
+    <section class="section section-tight" id="internship" data-nav="contact" aria-labelledby="internship-title">
+      <div class="container">
+        <div class="card glass cta reveal">
+          <p class="pill"><span class="pulse" aria-hidden="true"></span>Available for internships</p>
+          <h2 id="internship-title">Currently Open to Internship Opportunities</h2>
+          <p>I am looking for a web development internship where I can contribute to real-world projects, strengthen my development skills, learn from experienced developers, and gain professional industry experience.</p>
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-primary" href="#contact">Contact Me <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact" data-nav="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Contact</h2>
+          <p class="lead">Have an internship opportunity or a question? Send me a message.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="card glass contact-info reveal">
+            <h3>Abdul Wahab</h3>
+            <p class="contact-role">Web Developer</p>
+            <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="ri-phone-fill" style=" color: #7fa8de;"></i>
+           <p style="margin: 0;">+923003064631</p>
+         </div>
+            <ul class="contact-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Hyderabad, Pakistan</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:wahababbasi752@gmail.com">wahababbasi752@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <form class="card glass contact-form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err">
+              <p class="field-error" id="cf-name-err" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="cf-email-err">
+              <p class="field-error" id="cf-email-err" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required aria-describedby="cf-message-err"></textarea>
+              <p class="field-error" id="cf-message-err" role="alert"></p>
+            </div>
+            <button class="btn btn-primary" type="submit" id="cf-submit">Send Message <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <p class="footer-name">Abdul Wahab</p>
+        <p>Web Developer</p>
+        <p> <i class="ri-map-pin-fill"style=" color: #7fa8de;" ></i>Hyderabad, Pakistan</p>
+        <p><i class="ri-phone-fill" style=" color: #7fa8de;"></i>0300306431</p>
+        <p ><i class="ri-mail-fill" style="color: #7fa8de;" ></i><a href="mailto:wahababbasi752@gmail.com">wahababbasi752@gmail.com</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificate">Certificate</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copyright container">&copy; 2026 Abdul Wahab. All rights reserved.</p>
+  </footer>
+
+  <!-- Notifications -->
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- Subtle cursor follower (only created on mouse devices) -->
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <noscript><style>.loader{display:none!important}html.is-loading{overflow:auto!important}</style></noscript>
+</body>
+</html>
